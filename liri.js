@@ -3,9 +3,10 @@ require("dotenv").config();
 var fs = require('fs');
 var Twitter = require('twitter');
 var request = require('request');
-var spotify = require('node-spotify-api');
+var Spotify = require('node-spotify-api');
 var key = require('./key.js');
 
+var spotify = new Spotify(key.spotify);
 //Variables that retrieves what the user types in the command terminal
 var action = process.argv[2];
 var search = process.argv[3];
